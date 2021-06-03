@@ -1,0 +1,13 @@
+certifi
+chardet
+greenlet
+idna
+numpy
+pandas
+PyMySQL
+python-dateutil
+pytz
+requests
+six
+SQLAlchemy
+urllib3

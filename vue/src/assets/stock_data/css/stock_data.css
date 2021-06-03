@@ -1,0 +1,36 @@
+/*
+* ==========================================================
+*      DASHBOARD COUNTS
+* ==========================================================
+*/
+.dashboard-counts {
+  color: #333;
+  padding-left: 40px;
+}
+
+.dashboard-counts .count-title span {
+  font-size: 0.8em;
+  color: #aaa;
+  display: block;
+}
+
+.dashboard-counts .count-title i {
+  font-size: 1.5em;
+  color: #33b35a;
+}
+
+.dashboard-counts .icon {
+  margin-right: 10px;
+}
+
+.dashboard-counts strong {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #555;
+  display: block;
+}
+
+.dashboard-counts .count-number {
+  font-size: 2.2em;
+  font-weight: 300;
+}

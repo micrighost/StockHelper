@@ -1,0 +1,52 @@
+version: "3.5"
+
+services:
+  centos:
+    build: ./docker/centos
+    image: local/centos7
+
+  db:
+    image: mariadb
+    container_name: mariadb
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./database_backup:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: stockhelper
+      MYSQL_DATABASE: stockhelper
+    networks:
+      default:
+        ipv4_address: 172.18.0.101
+
+  backend:
+    build: ./docker/flask
+    container_name: flask_stockhelper
+    ports:
+      - "8889:5000"
+    networks:
+      default:
+        ipv4_address: 172.18.0.112
+    volumes:
+      - ./flasky:/var/www/html
+
+  frontend:
+    build: ./docker/vue
+    container_name: vue_stockhelper
+    ports:
+      - "8080:8080"
+    networks:
+      default:
+        ipv4_address: 172.18.0.113
+    volumes:
+      - ./vue:/var/www/html
+
+networks:
+  default:
+    name: stockhelper_internal_network
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.18.0.0/24

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <!-- size -->
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <!-- favicon -->
+      <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+      <!-- google sign in，content加入用戶端編號 -->
+      <meta name="google-signin-client_id" content="410679756996-7a9u83uligpumq92m6p0ihsc330a5v48.apps.googleusercontent.com">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+      <title>StockHelper</title>
+      <style type="text/css">
+        [v-cloak] {
+          display: none;
+        }
+      </style>
+    </head>
+  <body>
+    <div id="app" v-cloak>
+    <!-- built files will be auto injected -->
+    </div>
+<footer class="bg-dark text-center text-white">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright:
+    <a class="text-white" href="http://www.stockhelper.com.tw:8080">www.stockhelper.com.tw</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!--  popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- js: login page -->
+    <script type="text/javascript" src='static/js/login.js'></script>
+    <!-- js: vuex  -->
+    <script src="https://unpkg.com/vuex"></script>
+    <!-- js: vee-validate -->
+    <script src="https://cdn.jsdelivr.net/npm/vee-validate@<3.0.0/dist/vee-validate.js"></script>
+    <!-- google oauth  -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    <script>
+      function onLoad() {
+        gapi.load('auth2', function() {
+        gapi.auth2.init();
+        });
+      }
+    </script>
+    <!--highstock: 畫K線圖-->
+    <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/drag-panes.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+    <!-- 三大法人長條圖, ai預測圓餅圖。 -->
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  </body>
+</html>
